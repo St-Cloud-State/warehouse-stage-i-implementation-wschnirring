@@ -1,5 +1,5 @@
 public class Product {
-    // Private fields for the class
+    // Private fields
     private String productID;
     private String name;
     private Float price;

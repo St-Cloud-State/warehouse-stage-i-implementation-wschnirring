@@ -6,10 +6,10 @@ public class ProductList {
     private List<Product> products = new LinkedList<Product>();
 
     // Constructor
-    private ProductList(){};
+    private ProductList(){}; // Private to enforce singleton
 
     // Operations
-    public static ProductList instance() {
+    public static ProductList instance() { // Creation method
         if (productList == null) {
             return (productList = new ProductList());
         }

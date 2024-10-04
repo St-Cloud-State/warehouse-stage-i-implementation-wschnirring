@@ -1,7 +1,7 @@
 import java.util.*;
 
 public class Client {
-    // Private fields for the class
+    // Private fields
     private String clientID;
     private String name;
     private String email;

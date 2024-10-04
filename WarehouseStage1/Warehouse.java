@@ -1,5 +1,3 @@
-import java.util.*;
-
 public class Warehouse {
     // Private fields
     Integer nextClientID;
@@ -9,16 +7,15 @@ public class Warehouse {
     private static Warehouse warehouse;
 
     // Constructor
-    private Warehouse(){
+    private Warehouse(){ // Private to enforce singleton
         clientList = ClientList.instance();
         productList = ProductList.instance();
         nextClientID = 0;
         nextProductID = 0;
-
     };
 
     // Operations
-    public static Warehouse instance() {
+    public static Warehouse instance() { // Creation method
         if (warehouse == null) {
             return (warehouse = new Warehouse());
         }
@@ -45,7 +42,11 @@ public class Warehouse {
         return null;
     }
 
-    public Client findClient();
-    public Product findProduct();
+    public Client findClient(String clientID) {
+        return clientList.getClient(clientID);
+    }
+    public Product findProduct(String productID) {
+        return productList.getProduct(productID);
+    }
 
 }

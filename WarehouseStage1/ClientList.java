@@ -6,10 +6,10 @@ public class ClientList {
     private List<Client> clients = new LinkedList<Client>();
 
     // Constructor
-    private ClientList(){};
+    private ClientList(){}; // Private to enforce singleton
 
     // Operations
-    public static ClientList instance() {
+    public static ClientList instance() { // Creation method
         if (clientList == null) {
             return (clientList = new ClientList());
         }
