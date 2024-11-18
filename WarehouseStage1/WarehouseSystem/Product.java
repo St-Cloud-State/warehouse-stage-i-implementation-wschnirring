@@ -1,3 +1,4 @@
+package WarehouseSystem;
 public class Product {
     // Private fields
     private String productID;

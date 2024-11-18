@@ -1,3 +1,4 @@
+package WarehouseSystem;
 import java.util.*;
 
 public class ClientList {
